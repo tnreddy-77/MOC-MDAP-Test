@@ -1,0 +1,44 @@
+{
+	"name": "SourceDataset_exe",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "SqlServer1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [
+			{
+				"name": "OrderId",
+				"type": "int",
+				"precision": 10,
+				"scale": 255
+			},
+			{
+				"name": "OrderDate",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "OrderedBy",
+				"type": "varchar",
+				"precision": 255,
+				"scale": 255
+			},
+			{
+				"name": "DateCreated",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "DateLastModified",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

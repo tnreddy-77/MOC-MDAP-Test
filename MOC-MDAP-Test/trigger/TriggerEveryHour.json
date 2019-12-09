@@ -1,0 +1,28 @@
+{
+	"name": "TriggerEveryHour",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipeline": {
+			"pipelineReference": {
+				"referenceName": "Pipeline_Forlookup",
+				"type": "PipelineReference"
+			},
+			"parameters": {
+				"StartDateTime": "@trigger().outputs.windowstarttime"
+			}
+		},
+		"type": "TumblingWindowTrigger",
+		"typeProperties": {
+			"frequency": "Minute",
+			"interval": 15,
+			"startTime": "2019-12-06T10:00:00Z",
+			"delay": "00:00:00",
+			"maxConcurrency": 50,
+			"retryPolicy": {
+				"intervalInSeconds": 30
+			},
+			"dependsOn": []
+		}
+	}
+}

@@ -1,0 +1,42 @@
+{
+	"name": "SourceDataset_ftg",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "SqlServer1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [
+			{
+				"name": "OrderItemId",
+				"type": "int"
+			},
+			{
+				"name": "OrderId",
+				"type": "int"
+			},
+			{
+				"name": "ItemSKU",
+				"type": "varchar"
+			},
+			{
+				"name": "UnitPrice",
+				"type": "decimal"
+			},
+			{
+				"name": "Quantity",
+				"type": "int"
+			},
+			{
+				"name": "ModifiedDate",
+				"type": "datetime"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "OrderItem"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
